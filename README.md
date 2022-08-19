@@ -1,6 +1,6 @@
 # NoteHub
 
-**Grupo: Gabryel Bueno da Silva, Danilo Quaggio, Aldemir Humberto Soares Neto, Lucas Fiori Rosa.**
+**Grupo: Gabryel Bueno da Silva, Danilo Quaggio, Aldemir Humberto Soares Neto, Lucas Fiori Rosa e Lucas Gomes. 
 
 O projeto chamado “NoteHub” consiste em um aplicativo desktop implementado na linguagem C# e com Windows Forms. A solução se propõe a ser um serviço de gerenciamento de anotações acadêmicas em que o usuário cria tópicos baseados nas matérias que está cursando e cria notas de aula dentro de cada tópico. 
 
