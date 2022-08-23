@@ -17,9 +17,22 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void Entrar(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            home h1 = new home();
+            h1.Show();
+            
+        }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cadastrar a1 = new cadastrar();
+            a1.Show();
         }
     }
 }

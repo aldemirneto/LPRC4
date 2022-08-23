@@ -26,5 +26,13 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void CadastroUsuario(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usuário Cadastrado.");
+            this.Hide();
+            login login = new login();
+            login.Show();
+        }
     }
 }

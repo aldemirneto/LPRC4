@@ -39,33 +39,37 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(140, 248);
+            this.btnCadastrar.Location = new System.Drawing.Point(160, 331);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(86, 31);
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.CadastroUsuario);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 121);
+            this.textBox1.Location = new System.Drawing.Point(137, 161);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 23);
+            this.textBox1.Size = new System.Drawing.Size(137, 27);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 197);
+            this.textBox2.Location = new System.Drawing.Point(137, 263);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 23);
+            this.textBox2.Size = new System.Drawing.Size(137, 27);
             this.textBox2.TabIndex = 2;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(120, 30);
+            this.lblNome.Location = new System.Drawing.Point(137, 40);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(40, 15);
+            this.lblNome.Size = new System.Drawing.Size(50, 20);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
             this.lblNome.Click += new System.EventHandler(this.label1_Click);
@@ -73,9 +77,9 @@
             // lblUsuarioCadastro
             // 
             this.lblUsuarioCadastro.AutoSize = true;
-            this.lblUsuarioCadastro.Location = new System.Drawing.Point(120, 103);
+            this.lblUsuarioCadastro.Location = new System.Drawing.Point(137, 137);
             this.lblUsuarioCadastro.Name = "lblUsuarioCadastro";
-            this.lblUsuarioCadastro.Size = new System.Drawing.Size(47, 15);
+            this.lblUsuarioCadastro.Size = new System.Drawing.Size(59, 20);
             this.lblUsuarioCadastro.TabIndex = 4;
             this.lblUsuarioCadastro.Text = "Usuario";
             this.lblUsuarioCadastro.Click += new System.EventHandler(this.label2_Click);
@@ -83,24 +87,25 @@
             // lblSenhaCadastro
             // 
             this.lblSenhaCadastro.AutoSize = true;
-            this.lblSenhaCadastro.Location = new System.Drawing.Point(120, 179);
+            this.lblSenhaCadastro.Location = new System.Drawing.Point(137, 239);
             this.lblSenhaCadastro.Name = "lblSenhaCadastro";
-            this.lblSenhaCadastro.Size = new System.Drawing.Size(39, 15);
+            this.lblSenhaCadastro.Size = new System.Drawing.Size(49, 20);
             this.lblSenhaCadastro.TabIndex = 5;
             this.lblSenhaCadastro.Text = "Senha";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(120, 48);
+            this.textBox3.Location = new System.Drawing.Point(137, 64);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 23);
+            this.textBox3.Size = new System.Drawing.Size(137, 27);
             this.textBox3.TabIndex = 6;
             // 
             // cadastrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 329);
+            this.ClientSize = new System.Drawing.Size(409, 439);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.lblSenhaCadastro);
             this.Controls.Add(this.lblUsuarioCadastro);
@@ -108,6 +113,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCadastrar);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cadastrar";
             this.Text = "cadastrar";
             this.ResumeLayout(false);
