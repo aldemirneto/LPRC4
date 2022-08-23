@@ -16,5 +16,24 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+
+        private void UpdateUSer(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usuário Alterado.");
+            this.Hide();
+            home home = new home();
+            home.Show();
+            this.Close();
+        }
+
+        private void DropUSer(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usuário Deletado.");
+            this.Hide();
+            home home = new home();
+            home.Show();
+            this.Close();
+
+        }
     }
 }

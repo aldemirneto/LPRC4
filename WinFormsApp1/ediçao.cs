@@ -19,7 +19,18 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Nota Excluída!");
+            this.Hide();
+            home home = new home();
+            home.Show();
+        }
 
+        private void SaveEdit(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nota Salva!");
+            this.Hide();
+            home home = new home();
+            home.Show();
         }
     }
 }
