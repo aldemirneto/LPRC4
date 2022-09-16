@@ -30,11 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.criarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tópicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tópicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tópicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,20 @@
             this.criarToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.criarToolStripMenuItem.Text = "criar+";
             // 
+            // notaToolStripMenuItem
+            // 
+            this.notaToolStripMenuItem.Name = "notaToolStripMenuItem";
+            this.notaToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.notaToolStripMenuItem.Text = "nota";
+            this.notaToolStripMenuItem.Click += new System.EventHandler(this.notaToolStripMenuItem_Click);
+            // 
+            // tópicoToolStripMenuItem
+            // 
+            this.tópicoToolStripMenuItem.Name = "tópicoToolStripMenuItem";
+            this.tópicoToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
+            this.tópicoToolStripMenuItem.Text = "tópico";
+            this.tópicoToolStripMenuItem.Click += new System.EventHandler(this.tópicoToolStripMenuItem_Click);
+            // 
             // tópicosToolStripMenuItem
             // 
             this.tópicosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -75,6 +89,13 @@
             this.tópicosToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.tópicosToolStripMenuItem.Text = "tópicos";
             // 
+            // todosToolStripMenuItem
+            // 
+            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.todosToolStripMenuItem.Text = "todos";
+            this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -82,27 +103,7 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(37, 24);
             this.sairToolStripMenuItem.Text = "sair";
-            // 
-            // notaToolStripMenuItem
-            // 
-            this.notaToolStripMenuItem.Name = "notaToolStripMenuItem";
-            this.notaToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.notaToolStripMenuItem.Text = "nota";
-            this.notaToolStripMenuItem.Click += new System.EventHandler(this.notaToolStripMenuItem_Click);
-            // 
-            // tópicoToolStripMenuItem
-            // 
-            this.tópicoToolStripMenuItem.Name = "tópicoToolStripMenuItem";
-            this.tópicoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.tópicoToolStripMenuItem.Text = "tópico";
-            this.tópicoToolStripMenuItem.Click += new System.EventHandler(this.tópicoToolStripMenuItem_Click);
-            // 
-            // todosToolStripMenuItem
-            // 
-            this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.todosToolStripMenuItem.Text = "todos";
-            this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -125,6 +126,7 @@
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NoteHub";
+            this.Load += new System.EventHandler(this.main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
