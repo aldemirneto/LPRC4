@@ -12,6 +12,7 @@ namespace noteHub
 {
     public partial class main : Form
     {
+        User user { get; set; }
         public main()
         {
             InitializeComponent();
@@ -48,6 +49,29 @@ namespace noteHub
             myNewTelaSobre.MdiParent = this;
             myNewTelaSobre.Show();
             // MessageBox.Show(myNewTelaSobre.MdiParent.ToString());
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sair mysair = new sair();
+            mysair.name = user.Name;
+            DialogResult res = mysair.ShowDialog();
+            if(res == DialogResult.OK)
+            {
+                MessageBox.Show("Você será desconectado!");
+            }
+            else if(res == DialogResult.Cancel)
+            {
+                MessageBox.Show("Sessão mantida!");
+            }
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            user = new User();
+            user.Name = "Gabryel";
+            user.Username = "byelbueno";
+            user.Password = "1234";
         }
     }
 }
