@@ -19,10 +19,10 @@ namespace noteHub
 
         private void saveNoteBtn_Click(object sender, EventArgs e)
         {
-            Note note = new Note
-            {
-                Description = "aleluia"
-            };
+            Note note = new Note(1, "23/09/2022", 1, "nota", "uma nova nota");
+            
+                
+            
 
             MessageBox.Show(note.Description);
             MessageBox.Show("Salvo com sucesso (sqn haha)");

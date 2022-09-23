@@ -86,14 +86,14 @@
             this.todosToolStripMenuItem});
             this.tópicosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.tópicosToolStripMenuItem.Name = "tópicosToolStripMenuItem";
-            this.tópicosToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
-            this.tópicosToolStripMenuItem.Text = "tópicos";
+            this.tópicosToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.tópicosToolStripMenuItem.Text = "notas";
             // 
             // todosToolStripMenuItem
             // 
             this.todosToolStripMenuItem.Name = "todosToolStripMenuItem";
-            this.todosToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.todosToolStripMenuItem.Text = "todos";
+            this.todosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.todosToolStripMenuItem.Text = "todas";
             this.todosToolStripMenuItem.Click += new System.EventHandler(this.todosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
