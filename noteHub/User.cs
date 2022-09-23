@@ -10,6 +10,14 @@ namespace noteHub
     {
         public string Name { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }   
-    }   
+        public string Password { get; set; }
+
+        public User(string name, string username, string password)
+        {
+            this.Name = name;
+            this.Username = username;
+            this.Password = password;
+        }
+
+    }
 }

@@ -68,10 +68,8 @@ namespace noteHub
 
         private void main_Load(object sender, EventArgs e)
         {
-            user = new User();
-            user.Name = "Gabryel";
-            user.Username = "byelbueno";
-            user.Password = "1234";
+            user = new User("Gabryel", "byelbueno", "1234");
+            
         }
     }
 }

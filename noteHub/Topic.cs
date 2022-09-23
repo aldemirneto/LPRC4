@@ -11,5 +11,11 @@ namespace noteHub
         private Int32 IDTopic;
         public string DescTopic { get; set; }
 
+        public Topic(Int32 id, string desctopic)
+        {
+            this.IDTopic = id;
+            this.DescTopic = desctopic;
+        }
+
     }
 }
