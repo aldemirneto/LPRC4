@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace noteHub
 {
-    internal class Note
+    public class Note
     {
-        private Int32 ID;
+        public Int32 ID;
         public string Date { get; set; }
         public int Topic { get; set; }
         public string Name { get; set; }
@@ -24,5 +24,6 @@ namespace noteHub
             this.Description = description;
 
         }
+
     }
 }

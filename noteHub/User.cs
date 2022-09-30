@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace noteHub
 {
-    internal class User
+    public class User
     {
         public string Name { get; set; }
         public string Username { get; set; }
@@ -19,5 +19,13 @@ namespace noteHub
             this.Password = password;
         }
 
+        public User()
+        {
+        }
+
+        public static implicit operator User(Note v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

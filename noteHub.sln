@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noteHub", "noteHub\noteHub.csproj", "{0634C356-D25A-44D7-BF44-86D34E578382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{863412C9-EAB8-4135-BB2C-9653A2F8013C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{0634C356-D25A-44D7-BF44-86D34E578382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0634C356-D25A-44D7-BF44-86D34E578382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0634C356-D25A-44D7-BF44-86D34E578382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA6F4E67-5EA7-4060-88FF-A3F6123EBB3D}
 	EndGlobalSection
 EndGlobal

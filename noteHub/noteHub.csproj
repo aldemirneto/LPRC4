@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NotaDAO.cs" />
     <Compile Include="sair.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <Compile Include="telaSobre.Designer.cs">
       <DependentUpon>telaSobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserDAO.cs" />
     <EmbeddedResource Include="criarNota.resx">
       <DependentUpon>criarNota.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +129,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{863412c9-eab8-4135-bb2c-9653a2f8013c}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
