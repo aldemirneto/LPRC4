@@ -14,6 +14,8 @@ namespace noteHub
         public string Name { get; set; }
         public string Description { get; set; }
 
+        public Note() { }
+
         public Note(int id, string date, int topic, string name, string description)
         {
 

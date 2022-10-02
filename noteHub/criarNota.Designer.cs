@@ -28,47 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbNota = new System.Windows.Forms.RichTextBox();
+            this.cbTopicos = new System.Windows.Forms.ComboBox();
+            this.statusStripCriarNota = new System.Windows.Forms.StatusStrip();
+            this.Caracteres = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txtbTitulo = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.Label();
             this.saveNoteBtn = new System.Windows.Forms.Button();
+            this.statusStripCriarNota.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // txtbNota
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 71);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(292, 265);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "Comece uma nova nota...";
+            this.txtbNota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbNota.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtbNota.Location = new System.Drawing.Point(12, 71);
+            this.txtbNota.Name = "txtbNota";
+            this.txtbNota.Size = new System.Drawing.Size(292, 265);
+            this.txtbNota.TabIndex = 0;
+            this.txtbNota.Text = "Comece uma nova nota...";
+            this.txtbNota.Click += new System.EventHandler(this.txtbNota_Click);
+            this.txtbNota.TextChanged += new System.EventHandler(this.txtbNota_TextChanged);
+            this.txtbNota.Leave += new System.EventHandler(this.txtbNota_Leave);
             // 
-            // comboBox1
+            // cbTopicos
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(172, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cbTopicos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbTopicos.FormattingEnabled = true;
+            this.cbTopicos.Location = new System.Drawing.Point(172, 26);
+            this.cbTopicos.Name = "cbTopicos";
+            this.cbTopicos.Size = new System.Drawing.Size(132, 21);
+            this.cbTopicos.TabIndex = 1;
+            this.cbTopicos.SelectedIndexChanged += new System.EventHandler(this.cbTopicos_SelectedIndexChanged);
             // 
-            // statusStrip1
+            // statusStripCriarNota
             // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.statusStrip1.Location = new System.Drawing.Point(0, 386);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(316, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStripCriarNota.BackColor = System.Drawing.SystemColors.Control;
+            this.statusStripCriarNota.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Caracteres});
+            this.statusStripCriarNota.Location = new System.Drawing.Point(0, 386);
+            this.statusStripCriarNota.Name = "statusStripCriarNota";
+            this.statusStripCriarNota.Size = new System.Drawing.Size(316, 22);
+            this.statusStripCriarNota.TabIndex = 2;
+            this.statusStripCriarNota.Text = "Caracteres";
             // 
-            // textBox1
+            // Caracteres
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 3;
+            this.Caracteres.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.Caracteres.Name = "Caracteres";
+            this.Caracteres.Size = new System.Drawing.Size(74, 17);
+            this.Caracteres.Text = "Caracteres: 0";
+            // 
+            // txtbTitulo
+            // 
+            this.txtbTitulo.Location = new System.Drawing.Point(12, 26);
+            this.txtbTitulo.Name = "txtbTitulo";
+            this.txtbTitulo.Size = new System.Drawing.Size(142, 20);
+            this.txtbTitulo.TabIndex = 3;
+            this.txtbTitulo.TextChanged += new System.EventHandler(this.txtbTitulo_TextChanged);
             // 
             // Nome
             // 
@@ -101,14 +118,17 @@
             this.ClientSize = new System.Drawing.Size(316, 408);
             this.Controls.Add(this.saveNoteBtn);
             this.Controls.Add(this.Nome);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtbTitulo);
+            this.Controls.Add(this.statusStripCriarNota);
+            this.Controls.Add(this.cbTopicos);
+            this.Controls.Add(this.txtbNota);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "criarNota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "criarNota";
+            this.Load += new System.EventHandler(this.criarNota_Load);
+            this.statusStripCriarNota.ResumeLayout(false);
+            this.statusStripCriarNota.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,11 +136,12 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox txtbNota;
+        private System.Windows.Forms.ComboBox cbTopicos;
+        private System.Windows.Forms.StatusStrip statusStripCriarNota;
+        private System.Windows.Forms.TextBox txtbTitulo;
         private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.Button saveNoteBtn;
+        private System.Windows.Forms.ToolStripStatusLabel Caracteres;
     }
 }

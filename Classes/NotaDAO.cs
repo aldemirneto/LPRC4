@@ -25,7 +25,7 @@ namespace noteHub
 
                 foreach (DataRow objLinha in objDataTable.Rows)
                 {
-                    User objNovaNota = new Note();
+                    Note objNovaNota = new Note();
                     objNovaNota.Name = objLinha["Name"] != DBNull.Value ? Convert.ToString(objLinha["Name"]) : "null";
                     objNovaNota.Description = objLinha["Description"] != DBNull.Value ? Convert.ToString(objLinha["Description"]) : "";
 

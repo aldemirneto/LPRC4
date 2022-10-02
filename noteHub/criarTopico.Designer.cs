@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTopico = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbTopico
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(47, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbTopico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbTopico.Location = new System.Drawing.Point(47, 112);
+            this.tbTopico.Name = "tbTopico";
+            this.tbTopico.Size = new System.Drawing.Size(224, 20);
+            this.tbTopico.TabIndex = 0;
+            this.tbTopico.TextChanged += new System.EventHandler(this.tbTopico_TextChanged);
             // 
             // button1
             // 
@@ -74,7 +75,7 @@
             this.ClientSize = new System.Drawing.Size(316, 408);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbTopico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "criarTopico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -86,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTopico;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
     }
