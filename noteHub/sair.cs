@@ -32,6 +32,7 @@ namespace noteHub
         private void btn_sim_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            Application.Exit();
         }
 
         private void sair_Load(object sender, EventArgs e)

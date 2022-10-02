@@ -27,7 +27,7 @@ namespace noteHub
                 this.DGV_Lista_de_Notas.DataSource = this.minhasNotas;            
             }else
             {
-                this.DGV_Lista_de_Notas.DataSource = null;
+                this.DGV_Lista_de_Notas.DataSource = "";
             }
         }
 
