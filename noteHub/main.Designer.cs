@@ -88,6 +88,7 @@
             this.tópicosToolStripMenuItem.Name = "tópicosToolStripMenuItem";
             this.tópicosToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
             this.tópicosToolStripMenuItem.Text = "notas";
+            this.tópicosToolStripMenuItem.Click += new System.EventHandler(this.tópicosToolStripMenuItem_Click);
             // 
             // todosToolStripMenuItem
             // 

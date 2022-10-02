@@ -13,6 +13,9 @@ namespace noteHub
     public partial class main : Form
     {
         User user { get; set; }
+        List<Note> notes = new List<Note>();
+        List<Topic> topics = new List<Topic>();
+
         public main()
         {
             InitializeComponent();
@@ -20,35 +23,54 @@ namespace noteHub
 
         private void todosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null) ActiveMdiChild.Close();
-            listaNotas myNewListaNotas = new listaNotas();
-            myNewListaNotas.MdiParent = this;
-            myNewListaNotas.Show();
+            if (ActiveMdiChild.GetType() != typeof(listaNotas))
+            {
+                if (ActiveMdiChild != null) ActiveMdiChild.Close();
+                listaNotas myNewListaNotas = new listaNotas();
+                myNewListaNotas.MdiParent = this;
+                myNewListaNotas.minhasNotas = this.notes;
+                myNewListaNotas.topics = this.topics;
+                myNewListaNotas.Show();
+            }
         }
 
         private void notaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(ActiveMdiChild != null) ActiveMdiChild.Close();
-            criarNota myNewNote = new criarNota();
-            myNewNote.MdiParent = this;
-            myNewNote.Show();
+            if (ActiveMdiChild.GetType() != typeof(criarNota))
+            {
+                if (ActiveMdiChild != null) ActiveMdiChild.Close();
+                criarNota myNewNote = new criarNota();
+                myNewNote.MdiParent = this;
+                myNewNote.notes = this.notes;
+                myNewNote.topics = this.topics;
+                myNewNote.Show();
+            }else
+            {
+                MessageBox.Show("Salve sua nota primeiro");
+            }
         }
 
         private void tópicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null) ActiveMdiChild.Close();
-            criarTopico myNewTopic = new criarTopico();
-            myNewTopic.MdiParent = this;
-            myNewTopic.Show();
+            if (ActiveMdiChild.GetType() != typeof(criarTopico))
+            {
+                if (ActiveMdiChild != null) ActiveMdiChild.Close();
+                criarTopico myNewTopic = new criarTopico();
+                myNewTopic.topics = this.topics;
+                myNewTopic.MdiParent = this;
+                myNewTopic.Show();
+            }
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null) ActiveMdiChild.Close();
-            telaSobre myNewTelaSobre = new telaSobre();
-            myNewTelaSobre.MdiParent = this;
-            myNewTelaSobre.Show();
-            // MessageBox.Show(myNewTelaSobre.MdiParent.ToString());
+            if (ActiveMdiChild.GetType() != typeof(telaSobre))
+            {
+                if (ActiveMdiChild != null) ActiveMdiChild.Close();
+                telaSobre myNewTelaSobre = new telaSobre();
+                myNewTelaSobre.MdiParent = this;
+                myNewTelaSobre.Show();
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,8 +90,21 @@ namespace noteHub
 
         private void main_Load(object sender, EventArgs e)
         {
-            user = new User("Gabryel", "byelbueno", "1234");
-            
+           user = new User("Gabryel", "byelbueno", "1234");
+            listaNotas listaNotaDefault = new listaNotas();
+            listaNotaDefault.MdiParent = this;
+            listaNotaDefault.minhasNotas = this.notes;
+            listaNotaDefault.topics = this.topics;
+            listaNotaDefault.Show();
+
+        }
+
+        private void tópicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*foreach (Topic t in topics)
+            {
+                this.tópicosToolStripMenuItem.DropDownItems.Add(t.DescTopic);
+            }*/
         }
     }
 }

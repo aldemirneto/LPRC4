@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "noteHub", "noteHub\noteHub.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{863412C9-EAB8-4135-BB2C-9653A2F8013C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{EFC79E8D-75BA-4B67-9C56-9E8C249C0548}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863412C9-EAB8-4135-BB2C-9653A2F8013C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC79E8D-75BA-4B67-9C56-9E8C249C0548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC79E8D-75BA-4B67-9C56-9E8C249C0548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC79E8D-75BA-4B67-9C56-9E8C249C0548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC79E8D-75BA-4B67-9C56-9E8C249C0548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

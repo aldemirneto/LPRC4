@@ -12,6 +12,9 @@ namespace noteHub
 {
     public partial class listaNotas : Form
     {
+        public List<Note> minhasNotas;
+        public List<Topic> topics;
+
         public listaNotas()
         {
             InitializeComponent();
@@ -19,17 +22,24 @@ namespace noteHub
 
         private void listaNotas_Load(object sender, EventArgs e)
         {
-            List<Note> minhasNotas = new List<Note>();
-            Note note1 = new Note(1, "23/09/2022", 1, "Nota do Lucas", "uma nova nota do Lucas");
-            minhasNotas.Add(note1);
-            Note note2 = new Note(1, "23/09/2022", 1, "Nota do Gabryel", "uma nova nota do Gabryel");
-            minhasNotas.Add(note2);
-            Note note3 = new Note(1, "23/09/2022", 1, "Nota do Danilo", "uma nova nota do Danilo");
-            minhasNotas.Add(note3);
-            this.DGV_Lista_de_Notas.DataSource = minhasNotas;
-           
+            if (this.minhasNotas.Count > 0)
+            {
+                this.DGV_Lista_de_Notas.DataSource = this.minhasNotas;            
+            }else
+            {
+                this.DGV_Lista_de_Notas.DataSource = null;
+            }
+        }
 
-
+        private void DGV_Lista_de_Notas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            criarNota myCriarNota = new criarNota();
+            myCriarNota.localNote = minhasNotas[e.RowIndex];
+            myCriarNota.notes = minhasNotas;
+            myCriarNota.id = e.RowIndex;
+            myCriarNota.topics = this.topics;
+            myCriarNota.MdiParent = this.MdiParent;
+            myCriarNota.Show();
         }
     }
 }
